@@ -5,7 +5,6 @@ import Balance from "./components/Balance";
 import IncomeExpenses from "./components/IncomeExpenses";
 import TransactionList from "./components/TransactionList";
 import AddTransaction from "./components/AddTransaction";
-import LearningReduce from "./components/LearningReduce";
 import { GlobalProvider } from "./components/context/GlobalState";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <IncomeExpenses />
         <TransactionList />
         <AddTransaction />
-        <LearningReduce />
       </div>
     </GlobalProvider>
   );

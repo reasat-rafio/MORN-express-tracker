@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "./context/GlobalState";
+import { FcDeleteDatabase } from "react-icons/fc";
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
@@ -11,10 +12,10 @@ const Transaction = ({ transaction }) => {
         {sign}${Math.abs(transaction.amount)}
       </span>
       <button
-        onClick={() => deleteTransaction(transaction.id)}
+        onClick={() => deleteTransaction(transaction._id)}
         className="delete-btn"
       >
-        x
+        <FcDeleteDatabase />
       </button>
     </li>
   );
