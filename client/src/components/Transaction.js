@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "./context/GlobalState";
-import { FcDeleteDatabase } from "react-icons/fc";
+import { AiFillDelete } from "react-icons/ai";
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
@@ -9,14 +9,16 @@ const Transaction = ({ transaction }) => {
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
       {transaction.text}{" "}
       <span>
-        {sign}${Math.abs(transaction.amount)}
+        <span className="taka">
+          {sign}RP {Math.abs(transaction.amount)}
+        </span>
+        <button
+          onClick={() => deleteTransaction(transaction._id)}
+          className="delete-btn"
+        >
+          <AiFillDelete color="white" />
+        </button>
       </span>
-      <button
-        onClick={() => deleteTransaction(transaction._id)}
-        className="delete-btn"
-      >
-        <FcDeleteDatabase />
-      </button>
     </li>
   );
 };

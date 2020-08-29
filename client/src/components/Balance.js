@@ -10,10 +10,10 @@ const Balance = () => {
   console.log(total);
 
   return (
-    <>
+    <div className="balance">
       <h4>Your Balance</h4>
-      <h1>${numberWithCommas(total)}</h1>
-    </>
+      <h1>RP {numberWithCommas(total)}</h1>
+    </div>
   );
 };
 

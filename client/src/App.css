@@ -121,7 +121,9 @@ input[type="number"] {
   padding: 10px;
   margin: 10px 0;
 }
-
+.list li span .taka {
+  padding-right: 5px;
+}
 .list li.plus {
   border-right: 5px solid #2ecc71;
 }
@@ -132,20 +134,28 @@ input[type="number"] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  border: none;
+  background-color: slateblue;
+  padding: 5px 7px;
+  border-radius: 3px;
 }
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.header {
+  text-align: center;
+  background-color: #9c88ff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.balance {
+  /* border-left: 2px solid green;
+  border-right: 2px solid red; */
+  text-align: center;
+}
+.balance h1 {
+  color: goldenrod;
 }
